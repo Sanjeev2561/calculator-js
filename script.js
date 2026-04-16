@@ -1,16 +1,13 @@
 function append(value) {
   document.getElementById("display").value += value;
 }
-
 function clearDisplay() {
   document.getElementById("display").value = "";
 }
-
 function backspace() {
   let val = document.getElementById("display").value;
   document.getElementById("display").value = val.slice(0, -1);
 }
-
 function calculate() {
   let expression = document.getElementById("display").value;
   try {
@@ -20,8 +17,6 @@ function calculate() {
     document.getElementById("display").value = "Error";
   }
 }
-
-
 document.addEventListener("keydown", function (e) {
   const key = e.key;
   const valid = "0123456789+-*/.%";
